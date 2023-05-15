@@ -2,12 +2,14 @@ import './Nav.css'
 
 function Nav() {
     return (
-        <nav>
-            <ul>
-                <li><a href=''>Purple</a></li>
-                <li className='buttonLogInLogOut'><a href=''>Logout</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            
+            Purple
+          </a>
+        </div>
+      </nav>
     );
 }
 
