@@ -15,9 +15,10 @@ const Patient = () => {
         });
 
     }, [])
-    const emergencies = patient.emergencies
+    
+    
 
-    return (
+    return ( 
         <div className='container'>
             <div className='row'>
                 <div className='col-lg-12 personal-information'>
@@ -32,18 +33,25 @@ const Patient = () => {
 
                     
                 </div>
-                <div className='col-lg-12 medical-information'>
+                <div className='col-lg-12 emergencies-container'>
                     <h4 className='pb-2'>Emergency Contacts</h4>
                         
-                        {emergencies.map(({id, firstName, lastName, relationship, phone, fullName}) =>
-                           
-                            <div className='emergency-contact'>
-                                <b>{fullName}</b> <a className='emergency-edit-button' href=''>edit</a> 
-                                <p className='fw-lighter'>{relationship}</p>
-                                <p>{phone}</p>
+                        {patient.emergencies ? patient.emergencies.map(emergency => {
+                            return (
+                                <div className='emergency-contact' key={emergency.id}>
+                                <b>{emergency.fullName}</b> <a className='emergency-edit-button' href='#'>edit</a> 
+                                <p className='fw-lighter'>{emergency.relationship}</p>
+                                <p>{emergency.phone}</p>
+                                
+                                <hr/>
+
                             </div>
+                            )
+                        }
+                           
                             
-                        )}
+                            
+                        ): null}
                     
         
                 </div>

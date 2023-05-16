@@ -8,8 +8,11 @@
     padding-bottom: 100px;
 }
 
+.emergencies-container {
+    padding-top: 50px;
+}
 .emergency-contact {
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 .emergency-edit-button {

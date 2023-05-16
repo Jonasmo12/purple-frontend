@@ -10,15 +10,14 @@ function App() {
                 <Nav />
             
 
-            <div class="container patient-home">
-                <div class="row">
+            
                     <Patient />
-                </div>
-            </div>
+            
+            
 
-            <div class="footer">
+            
                 <Footer />
-            </div>
+           
       </div>
     );
 }
