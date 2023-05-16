@@ -70,7 +70,24 @@ const Patient = () => {
                         </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                        <div class="accordion-body">
+                            {patient.allergies ? patient.allergies.map(allergy => {
+                                return (
+                                    <div className='emergency-contact' key={allergy.id}>
+                                    <b>{allergy.name}</b>
+                                    <p className='fw-lighter'>{allergy.diagnosedDate}</p>
+                                    <p><b>Created Date: </b>{allergy.createdDate}</p>
+                                    
+                                    <hr/>
+
+                                </div>
+                                )
+                            }
+                            
+                                
+                                
+                            ): null}
+                        </div>
                         </div>
                     </div>
                     <div class="accordion-item">
