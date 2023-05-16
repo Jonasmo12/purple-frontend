@@ -24,12 +24,17 @@ const Patient = () => {
                 <div className='col-lg-12 personal-information'>
                 
                     <h4>Basic information</h4>
-                    <b>Patient ID: </b> {patient.patientID} <br></br>
-                    <b>Username: </b> {patient.username} <br></br>
-                    <b>Phone: </b> {patient.phone} <br></br>
-                    <b>Age:</b> {patient.age} <br></br>
-                    <b>Date of Birth: </b> {patient.dob} <br></br>
-                    <b>Gender: </b> {patient.gender} <br></br>
+                    <p className='basic-information-p'>Patient ID: <span className='basic-span'>{patient.patientID}</span></p> 
+                    
+                    <p className='basic-information-p'>Username: <span className='basic-span'>{patient.username}</span> </p> 
+                    
+                    <p className='basic-information-p'>Phone: <span className='basic-span'>{patient.phone}</span></p> 
+                    
+                    <p className='basic-information-p'>Age: <span className='basic-span'>{patient.age}</span> </p> 
+                    
+                    <p className='basic-information-p'>Date of Birth: <span className='basic-span'>{patient.dob}</span></p>  
+                    
+                    <p className='basic-information-p'>Gender: <span className='basic-span'>{patient.gender}</span></p> 
 
                     
                 </div>

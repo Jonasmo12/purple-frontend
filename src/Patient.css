@@ -10,6 +10,7 @@
 
 .emergencies-container {
     padding-top: 50px;
+    padding-bottom: 100px;
 }
 .emergency-contact {
     padding-bottom: 15px;
@@ -18,3 +19,16 @@
 .emergency-edit-button {
     float: right;
 }
+
+
+/* basic information conatiner start */
+
+.basic-information-p {
+    margin-bottom: 5px;
+}
+
+.basic-span {
+    font-weight: lighter;
+}
+
+/* basic information conatiner end */
