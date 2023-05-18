@@ -1,6 +1,32 @@
 import { Link } from "react-router-dom"
+import React, { useState } from "react"
+import axios from "axios";
 
 export default function SignUp() {
+
+    const [patient, setPatient] = useState({
+        username: "",
+        password: "",
+        phone: "",
+        gender: "",
+        dob: "",
+    });
+
+    const {username, password, phone, gender, dob} = patient
+    const onInputChange = (e) => {
+        setPatient({...patient, [e.target.name]: e.target.value});
+    }
+    
+
+    const onRegistration = async (e) => {
+        e.preventDefault();
+        await axios.post("http://localhost:8080/registration", patient)
+        .then((response) => {
+            console.log(response.data)
+            // this.setState(response.data)
+        })
+    }
+
     return (
         <>
             <div className="container">
@@ -19,26 +45,58 @@ export default function SignUp() {
                     </div>
 
                     <div className="col-lg-4">
-                        <form class="row g-3">
+                        <form class="row g-3" onSubmit={(e) => onRegistration(e)}>
                             <div class="col-md-12">
                                 <label for="inputEmail4" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4" />
+                                <input 
+                                    type={"email"}
+                                    class="form-control" 
+                                    id="inputEmail4" 
+                                    value={username}
+                                    name="username"
+                                    onChange={(e) => onInputChange(e)} />
                             </div>
                             <div class="col-md-12">
                                 <label for="inputPassword4" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="inputPassword4" />
+                                <input 
+                                    type={"password"}
+                                    class="form-control" 
+                                    id="inputPassword4" 
+                                    name="password"
+                                    value={password}
+                                    onChange={(e) => onInputChange(e)} />
                             </div>
                             <div class="col-12">
                                 <label for="inputAddress" class="form-label">Phone</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="0765070011" />
+                                <input  
+                                    type={"text"}
+                                    class="form-control" 
+                                    id="inputAddress" 
+                                    placeholder="0765070011" 
+                                    name="phone"
+                                    value={phone}
+                                    onChange={(e) => onInputChange(e)}/>
                             </div>
                             <div class="col-12">
                                 <label for="inputAddress2" class="form-label">Gender</label>
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Sex"/>
+                                <input 
+                                    type={"text"}
+                                    class="form-control" 
+                                    id="inputAddress2" 
+                                    placeholder="Sex"
+                                    name="gender"
+                                    value={gender}
+                                    onChange={(e) => onInputChange(e)}/>
                             </div>
                             <div class="col-md-12">
                                 <label for="inputCity" class="form-label">Date of Birth</label>
-                                <input type="date" class="form-control" id="inputCity" />
+                                <input 
+                                    type={"date"}
+                                    class="form-control" 
+                                    id="inputCity" 
+                                    name="dob"
+                                    value={dob}
+                                    onChange={(e) => onInputChange(e)}/>
                             </div>
                             
                             

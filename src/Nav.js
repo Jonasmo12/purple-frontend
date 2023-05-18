@@ -9,7 +9,7 @@ function Nav() {
             Purple
           </a>
         </div>
-      </nav>
+        </nav>
     );
 }
 
