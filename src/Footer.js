@@ -2,8 +2,8 @@ import './Footer.css';
 
 function Footer() {
     return (
-        <div class="">
-            <p class="footer-p">Another one by Jonas Moloto</p>
+        <div className="">
+            <p className="footer-p">Another one by Jonas Moloto</p>
         </div>
     )
 }

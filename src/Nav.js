@@ -2,9 +2,9 @@ import './Nav.css'
 
 function Nav() {
     return (
-        <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+        <nav className="navbar bg-body-tertiary">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
             
             Purple
           </a>

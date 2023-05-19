@@ -20,7 +20,7 @@ export default function SignUp() {
 
     const onRegistration = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:8080/registration", patient)
+        await axios.post("http://localhost:8080/api/registration", patient)
         .then((response) => {
             console.log(response.data)
             // this.setState(response.data)
@@ -45,22 +45,22 @@ export default function SignUp() {
                     </div>
 
                     <div className="col-lg-4">
-                        <form class="row g-3" onSubmit={(e) => onRegistration(e)}>
-                            <div class="col-md-12">
-                                <label for="inputEmail4" class="form-label">Email</label>
+                        <form className="row g-3" onSubmit={(e) => onRegistration(e)}>
+                            <div className="col-md-12">
+                                <label for="inputEmail4" className="form-label">Email</label>
                                 <input 
                                     type={"email"}
-                                    class="form-control" 
+                                    className="form-control" 
                                     id="inputEmail4" 
                                     value={username}
                                     name="username"
                                     onChange={(e) => onInputChange(e)} />
                             </div>
-                            <div class="col-md-12">
-                                <label for="inputPassword4" class="form-label">Password</label>
+                            <div className="col-md-12">
+                                <label for="inputPassword4" className="form-label">Password</label>
                                 <input 
                                     type={"password"}
-                                    class="form-control" 
+                                    className="form-control" 
                                     id="inputPassword4" 
                                     name="password"
                                     value={password}
